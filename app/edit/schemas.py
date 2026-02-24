@@ -137,9 +137,13 @@ class NovelEditArgs(CustomModel):
 
 class PersonEditArgs(CustomModel):
     description_ua: str | None = Field(None, examples=["..."])
-    name_native: str | None = Field(None, examples=["丸山 博雄"], max_length=255)
+    name_native: str | None = Field(
+        None, examples=["丸山 博雄"], max_length=255
+    )
     name_ua: str | None = Field(None, examples=["Хіро Маруяма"], max_length=255)
-    name_en: str | None = Field(None, examples=["Hiroo Maruyama"], max_length=255)
+    name_en: str | None = Field(
+        None, examples=["Hiroo Maruyama"], max_length=255
+    )
     synonyms: list[str] | None = None
 
 
