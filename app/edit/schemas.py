@@ -35,16 +35,6 @@ class EditContentTypeEnum(str, Enum):
     content_novel = constants.CONTENT_NOVEL
 
 
-class AnimeVideoTypeEnum(str, Enum):
-    video_promo = constants.VIDEO_PROMO
-    video_music = constants.VIDEO_MUSIC
-
-
-class AnimeOSTTypeEnum(str, Enum):
-    opening = constants.OST_OPENING
-    ending = constants.OST_ENDING
-
-
 class EditStatusEnum(str, Enum):
     edit_accepted = constants.EDIT_ACCEPTED
     edit_pending = constants.EDIT_PENDING
@@ -147,13 +137,9 @@ class NovelEditArgs(CustomModel):
 
 class PersonEditArgs(CustomModel):
     description_ua: str | None = Field(None, examples=["..."])
-    name_native: str | None = Field(
-        None, examples=["丸山 博雄"], max_length=255
-    )
+    name_native: str | None = Field(None, examples=["丸山 博雄"], max_length=255)
     name_ua: str | None = Field(None, examples=["Хіро Маруяма"], max_length=255)
-    name_en: str | None = Field(
-        None, examples=["Hiroo Maruyama"], max_length=255
-    )
+    name_en: str | None = Field(None, examples=["Hiroo Maruyama"], max_length=255)
     synonyms: list[str] | None = None
 
 
